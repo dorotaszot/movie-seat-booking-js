@@ -67,3 +67,44 @@ body {
   transform: scale(1);
   cursor: default;
 }
+
+.showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+}
+
+.showcase li {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.4);
+}
+
+p.text span {
+  color: #6feaf6
+}
