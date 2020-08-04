@@ -29,9 +29,8 @@ function updateSelectedCount() {
   //   return [...seats].indexOf(seat);
   // })
 
-  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
-
   // Local storage
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
   const selectedSeatsCount = selectedSeats.length;
@@ -51,6 +50,10 @@ function populateUI() {
     })
   }
 
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
 };
 
 // Movie select event 
@@ -68,3 +71,6 @@ container.addEventListener('click', (e) => {
     updateSelectedCount();
   }
 });
+
+// Initial count and total set
+updateSelectedCount();
